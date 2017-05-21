@@ -1,0 +1,7 @@
+C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1CsharpTests\bin\Debug\SerieDeExercicos1CsharpTests.dll
+C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1CsharpTests\bin\Debug\SerieDeExercicos1CsharpTests.pdb
+C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1CsharpTests\bin\Debug\SerieDeExercicos1Csharp.exe
+C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1CsharpTests\bin\Debug\SerieDeExercicos1Csharp.pdb
+C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1CsharpTests\obj\Debug\SerieDeExercicos1CsharpTests.csprojResolveAssemblyReference.cache
+C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1CsharpTests\obj\Debug\SerieDeExercicos1CsharpTests.dll
+C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1CsharpTests\obj\Debug\SerieDeExercicos1CsharpTests.pdb

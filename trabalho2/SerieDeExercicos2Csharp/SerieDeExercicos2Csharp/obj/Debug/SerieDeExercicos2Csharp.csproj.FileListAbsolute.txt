@@ -1,0 +1,2 @@
+C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho2\SerieDeExercicos2Csharp\SerieDeExercicos2Csharp\bin\Debug\SerieDeExercicos2Csharp.exe.config
+C:\Users\Utilizador\Documents\ISEL\7semestre\PC\PC_1617V\trabalho2\SerieDeExercicos2Csharp\SerieDeExercicos2Csharp\bin\Debug\SerieDeExercicos2Csharp.exe.config
