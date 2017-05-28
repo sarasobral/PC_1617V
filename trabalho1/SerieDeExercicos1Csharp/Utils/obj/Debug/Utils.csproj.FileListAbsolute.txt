@@ -3,3 +3,4 @@ C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp
 C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp\Utils\bin\Debug\Utils.pdb
 C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp\Utils\obj\Debug\Utils.exe
 C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp\Utils\obj\Debug\Utils.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp\Utils\obj\Debug\Utils.csprojResolveAssemblyReference.cache

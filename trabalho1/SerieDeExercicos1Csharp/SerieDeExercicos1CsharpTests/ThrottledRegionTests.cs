@@ -13,7 +13,7 @@ namespace SerieDeExercicos1CsharpTests {
 
         // retornar true se a entrada foi feita com sucesso. 
         [TestMethod]
-        public void TestSuccessTrue()
+        public void TestSuccess()
         {
             maxInside = 2;
             maxWaiting = 2;

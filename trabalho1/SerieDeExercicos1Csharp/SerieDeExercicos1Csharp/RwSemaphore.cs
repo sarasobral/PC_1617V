@@ -73,7 +73,12 @@ namespace SerieDeExercicos1Csharp {
                         waitingWriters.Remove(wrnode);
                         // garantir o acesso dos leitores ao semáforo
                         if (!writing && waitingWriters.Count == 0 && waitingReaders != null)
-                            GrantAccessToAllWaitingReaders();
+                            if (waitingReaders != null && waitingReaders.waiters > 0) {
+                                readers += waitingReaders.waiters;
+                                waitingReaders.done = true; // dar acesso aos leitores
+                                waitingReaders = null; // retirar os leitores de espera
+                                MonitorEx.PulseAll(mlock, mlock); // notificar todos os leitores
+                            }
                         throw;
                     }
                 } while (!wrnode.Value);
