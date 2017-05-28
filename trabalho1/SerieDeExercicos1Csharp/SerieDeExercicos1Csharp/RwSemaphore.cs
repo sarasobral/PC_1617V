@@ -5,7 +5,7 @@ using Utils;
 
 namespace SerieDeExercicos1Csharp {
     public class RwSemaphore {
-        private readonly object mlock = new object();
+        private readonly object myLock = new object();
         private int readers = 0; // numero currente de leitores
         private bool writing = false; // indica se um escritor está a escrever
         private class WaitingReaders {
@@ -17,7 +17,7 @@ namespace SerieDeExercicos1Csharp {
 
         // DownRead adquirem a posse do semáforo para leitura
         public void DownRead() { 
-            lock (mlock) {
+            lock (myLock) {
                 // não existem escritores à espera e não há nenhum esritor a escrever,
                 // o leitor ganha acesso independentemente dos outros leitores
                 if (waitingWriters.Count == 0 && !writing) {
@@ -31,7 +31,7 @@ namespace SerieDeExercicos1Csharp {
                 rdnode.waiters++;
                 do {
                     try {
-                        MonitorEx.Wait(mlock, mlock);
+                        MonitorEx.Wait(myLock, myLock);
                     }
                     catch (ThreadInterruptedException) {
                         // acesso foi garantido, o leitor retira-se
@@ -50,7 +50,7 @@ namespace SerieDeExercicos1Csharp {
         
         // DownWrite adquirem a posse do semáforo para escrita
         public void DownWrite() {
-            lock (mlock) {
+            lock (myLock) {
                 // nao existem leitores em espera e neinguem está a escrever e a fila de escritores está vazia,
                 // o escritor tem acesso ao semáforo
                 if (readers == 0 && !writing && waitingWriters.Count == 0) {
@@ -61,7 +61,7 @@ namespace SerieDeExercicos1Csharp {
                 LinkedListNode<bool> wrnode = waitingWriters.AddLast(false);
                 do {
                     try {
-                        MonitorEx.Wait(mlock, wrnode);
+                        MonitorEx.Wait(myLock, wrnode);
                     }
                     catch (ThreadInterruptedException) {
                         // acesso foi garantido, o escritor retira-se
@@ -77,7 +77,7 @@ namespace SerieDeExercicos1Csharp {
                                 readers += waitingReaders.waiters;
                                 waitingReaders.done = true; // dar acesso aos leitores
                                 waitingReaders = null; // retirar os leitores de espera
-                                MonitorEx.PulseAll(mlock, mlock); // notificar todos os leitores
+                                MonitorEx.PulseAll(myLock, myLock); // notificar todos os leitores
                             }
                         throw;
                     }
@@ -87,7 +87,7 @@ namespace SerieDeExercicos1Csharp {
 
         // UpRead liberta o semáforo depois do mesmo ter sido adquirido para leitura
         public void UpRead() {
-            lock (mlock) {
+            lock (myLock) {
                 // decrementar o número de leitores
                 readers--;
                 // último leitor e esxistem escritores eme espera
@@ -97,7 +97,8 @@ namespace SerieDeExercicos1Csharp {
         }
         // UpWrite liberta o semáforo depois do mesmo ter sido adquirido para escrita
         public void UpWrite() { 
-            lock (mlock) {
+            lock (myLock) {
+                writing = false;
                 // cede acesso a todos os leitores, caso não existam é garantido acesso a um escritor
                 DowngradeWriter();
             }
@@ -111,7 +112,7 @@ namespace SerieDeExercicos1Csharp {
                 readers += waitingReaders.waiters; 
                 waitingReaders.done = true; // dar acesso aos leitores
                 waitingReaders = null; // retirar os leitores de espera
-                MonitorEx.PulseAll(mlock, mlock); // notificar todos os leitores
+                MonitorEx.PulseAll(myLock, myLock); // notificar todos os leitores
             }
             else
                 GrantAccessToOneWritter();
@@ -123,8 +124,16 @@ namespace SerieDeExercicos1Csharp {
                 waitingWriters.RemoveFirst();       // remove the writer from the wait queue
                 writing = true;                     // set exclusive lock as taken
                 writer.Value = true;                // mark exclusive lock request as granted;
-                MonitorEx.PulseAll(mlock, writer);  // notify the specific writer
+                MonitorEx.PulseAll(myLock, writer);  // notify the specific writer
             }
+        }
+        public int getReaders()
+        {
+            return readers;
+        }
+        public int getWriters()
+        {
+            return waitingWriters.Count;
         }
     }
 }
