@@ -9,7 +9,7 @@ namespace SerieDeExercicos1Csharp {
     public class RetryLazy<T> where T : class {
 
         private readonly object myLock = new object();
-        private readonly Func<T> provider;
+        public Func<T> provider;
         private int maxRetries;
 
         public RetryLazy(Func<T> provider, int maxRetries) {

@@ -4,3 +4,9 @@ C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Cshar
 C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1Csharp\obj\Debug\SerieDeExercicos1Csharp.csprojResolveAssemblyReference.cache
 C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1Csharp\obj\Debug\SerieDeExercicos1Csharp.exe
 C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1Csharp\obj\Debug\SerieDeExercicos1Csharp.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1Csharp\bin\Debug\SerieDeExercicos1Csharp.exe.config
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1Csharp\obj\Debug\SerieDeExercicos1Csharp.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1Csharp\obj\Debug\SerieDeExercicos1Csharp.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1Csharp\bin\Debug\SerieDeExercicos1Csharp.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1Csharp\bin\Debug\SerieDeExercicos1Csharp.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho1\SerieDeExercicos1Csharp\SerieDeExercicos1Csharp\obj\Debug\SerieDeExercicos1Csharp.csprojResolveAssemblyReference.cache
