@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using Utils;
 
 namespace SerieDeExercicos1Csharp {
     class Mail<T> {

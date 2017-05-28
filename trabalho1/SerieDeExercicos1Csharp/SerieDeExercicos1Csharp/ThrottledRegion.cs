@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using Utils;
 
 namespace SerieDeExercicos1Csharp {
     public class ThrottledRegion {

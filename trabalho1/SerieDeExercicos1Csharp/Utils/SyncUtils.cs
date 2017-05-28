@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
-namespace SerieDeExercicos1Csharp {
+namespace Utils {
     public static class SyncUtils {
 
         public static int AdjustTimeout(ref int lastTime, ref int timeout)

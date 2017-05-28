@@ -1,70 +1,125 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
+using Utils;
 
 namespace SerieDeExercicos1Csharp {
     public class RwSemaphore {
-        // the request node used for enqueue shared lock requests
-        private class RdReqNode {
+        private readonly object mlock = new object();
+        private int readers = 0; // numero currente de leitores
+        private bool writing = false; // indica se um escritor está a escrever
+        private class WaitingReaders {
             internal int waiters;
-            internal bool done;
+            internal bool done; // se true todos os leitores estão em condição de ter acesso
         }
+        private WaitingReaders waitingReaders = null; // leitores em espera (os leitores entram todos no semáforo)
+        private readonly LinkedList<bool> waitingWriters = new LinkedList<bool>(); // escritores em espera (entra um de cada vez no semáforo)
 
-        private readonly object mlock;          
+        // DownRead adquirem a posse do semáforo para leitura
+        public void DownRead() { 
+            lock (mlock) {
+                // não existem escritores à espera e não há nenhum esritor a escrever,
+                // o leitor ganha acesso independentemente dos outros leitores
+                if (waitingWriters.Count == 0 && !writing) {
+                    readers++;
+                    return;
+                }
+                // o leitor fica em espera
+                WaitingReaders rdnode;
+                if ((rdnode = waitingReaders) == null)
+                    waitingReaders = rdnode = new WaitingReaders();
+                rdnode.waiters++;
+                do {
+                    try {
+                        MonitorEx.Wait(mlock, mlock);
+                    }
+                    catch (ThreadInterruptedException) {
+                        // acesso foi garantido, o leitor retira-se
+                        if (rdnode.done) {
+                            Thread.CurrentThread.Interrupt();
+                            return;
+                        }
+                        // o leitor é removido da espera
+                        if (--rdnode.waiters == 0)
+                            waitingReaders = null;
+                        throw;
+                    }
+                } while (!rdnode.done);
+            }
+        }
         
-        // the state of the read/write lock
-        private int readers;                    // current number of readers
-        private bool writing;               // true when writing
+        // DownWrite adquirem a posse do semáforo para escrita
+        public void DownWrite() {
+            lock (mlock) {
+                // nao existem leitores em espera e neinguem está a escrever e a fila de escritores está vazia,
+                // o escritor tem acesso ao semáforo
+                if (readers == 0 && !writing && waitingWriters.Count == 0) {
+                    writing = true;
+                    return;
+                }
+                // o escritor fica em espera
+                LinkedListNode<bool> wrnode = waitingWriters.AddLast(false);
+                do {
+                    try {
+                        MonitorEx.Wait(mlock, wrnode);
+                    }
+                    catch (ThreadInterruptedException) {
+                        // acesso foi garantido, o escritor retira-se
+                        if (wrnode.Value) {
+                            Thread.CurrentThread.Interrupt();
+                            return;
+                        }
+                        // o escritor é removido da espera
+                        waitingWriters.Remove(wrnode);
+                        // garantir o acesso dos leitores ao semáforo
+                        if (!writing && waitingWriters.Count == 0 && waitingReaders != null)
+                            GrantAccessToAllWaitingReaders();
+                        throw;
+                    }
+                } while (!wrnode.Value);
+            }
+        }
 
-        // all waiting readers same queue node. We do not need a linked list at all
-        private RdReqNode waitingReaders;
+        // UpRead liberta o semáforo depois do mesmo ter sido adquirido para leitura
+        public void UpRead() {
+            lock (mlock) {
+                // decrementar o número de leitores
+                readers--;
+                // último leitor e esxistem escritores eme espera
+                if (readers == 0 && waitingWriters.Count > 0)
+                    GrantAccessToOneWritter();
+            }
+        }
+        // UpWrite liberta o semáforo depois do mesmo ter sido adquirido para escrita
+        public void UpWrite() { 
+            lock (mlock) {
+                // cede acesso a todos os leitores, caso não existam é garantido acesso a um escritor
+                DowngradeWriter();
+            }
+        }
 
-        /* Os métodos DownRead e DownWrite adquirem a posse do semáforo 
-         * para leitura ou escrita, respectivamente.*/
-        public void DownRead()
-        { // throws ThreadInterruptedException
-        }
-        public void DownWrite()
-        { // throws ThreadInterruptedException
+        /* apenas pode ser invocado pelas threads que tenham
+         * adquirido o semáforo para escrita, liberta o acesso para 
+         * escrita e, atomicamente, adquire acesso para leitura.*/
+        public void DowngradeWriter() {
+            if (waitingReaders != null && waitingReaders.waiters > 0) {
+                readers += waitingReaders.waiters; 
+                waitingReaders.done = true; // dar acesso aos leitores
+                waitingReaders = null; // retirar os leitores de espera
+                MonitorEx.PulseAll(mlock, mlock); // notificar todos os leitores
+            }
+            else
+                GrantAccessToOneWritter();
         }
 
-        /* Os métodos UpRead e UpWrite libertam o semáforo depois do 
-         * mesmo ter sido adquirido para leitura ou escrita, respectivamente. */
-        public void UpRead() 
-        { // throws InvalidOperationException
-        }
-        public void UpWrite()
-        { // throws InvalidOperationException
-        }
-        /* O método DowngradeWriter , que apenas pode ser invocado pelas 
-         * threads que tenham adquirido o semáforo para escrita, liberta o 
-         * acesso para escrita e, atomicamente, adquire acesso para 
-         * leitura.*/
-        public void DowngradeWriter()
-        { // throws InvalidOperationException
+        private void GrantAccessToOneWritter() {
+            if (waitingWriters.Count > 0) {
+                LinkedListNode<bool> writer = waitingWriters.First;     // get first waiting writer
+                waitingWriters.RemoveFirst();       // remove the writer from the wait queue
+                writing = true;                     // set exclusive lock as taken
+                writer.Value = true;                // mark exclusive lock request as granted;
+                MonitorEx.PulseAll(mlock, writer);  // notify the specific writer
+            }
         }
     }
-    /*
-Se o método UpRead for invocado por threads que não tenham previamente 
-adquirido o semáforo para leitura, ou os métodos UpWrite e 
-DowngradeWriter forem invocados por threads que não tenham previamente
-adquirido o semáforo para escrita, deve ser lançada a excepção 
-InvalidOperationException . O acesso para leitura deve ser concedido às 
-threads leitoras que se encontrem no início da fila de espera (ou de 
-imediato, se a fila de espera estiver vazia quando é invocado o método 
-DownRead ) desde que o não tenha sido concedido acesso para escrita a 
-outra thread; para ser concedido acesso para escrita à thread que se 
-encontra à cabeça da fila (ou de imediato, se a fila estiver vazia quando 
-é invocado o método DownWrite ), é necessário que nenhuma outra thread 
-tenha adquirido acesso para escrita ou para leitura.
-Para que o semáforo seja equitativo na atribuição dos dois tipos de 
-acesso (leitura e escrita), deverá ser utilizada uma única fila de espera,
-com disciplina FIFO, onde são inseridas por ordem de chegada as
-solicitações de aquisição pendentes. A implementação deve suportar o 
-cancelamento dos métodos bloqueantes quando são interrompidas as threads 
-bloqueadas (lançando ThreadInterruptedException ) e deve optimizar o 
-número de comutações de t hread que ocorrem nas várias circunstâncias.
-*/
 }
