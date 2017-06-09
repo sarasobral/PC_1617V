@@ -1,2 +1,8 @@
 C:\Users\Utilizador\Documents\ISEL\7semestre\PC\trabalho2\SerieDeExercicos2Csharp\SerieDeExercicos2Csharp\bin\Debug\SerieDeExercicos2Csharp.exe.config
 C:\Users\Utilizador\Documents\ISEL\7semestre\PC\PC_1617V\trabalho2\SerieDeExercicos2Csharp\SerieDeExercicos2Csharp\bin\Debug\SerieDeExercicos2Csharp.exe.config
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho2\SerieDeExercicos2Csharp\SerieDeExercicos2Csharp\bin\Debug\SerieDeExercicos2Csharp.exe.config
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho2\SerieDeExercicos2Csharp\SerieDeExercicos2Csharp\bin\Debug\SerieDeExercicos2Csharp.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho2\SerieDeExercicos2Csharp\SerieDeExercicos2Csharp\bin\Debug\SerieDeExercicos2Csharp.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho2\SerieDeExercicos2Csharp\SerieDeExercicos2Csharp\obj\Debug\SerieDeExercicos2Csharp.csprojResolveAssemblyReference.cache
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho2\SerieDeExercicos2Csharp\SerieDeExercicos2Csharp\obj\Debug\SerieDeExercicos2Csharp.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho2\SerieDeExercicos2Csharp\SerieDeExercicos2Csharp\obj\Debug\SerieDeExercicos2Csharp.pdb

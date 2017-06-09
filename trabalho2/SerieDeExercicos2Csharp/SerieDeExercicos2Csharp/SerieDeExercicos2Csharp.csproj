@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConcurrentQueue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SyncUtils.cs" />
+    <Compile Include="ThrottledRegion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
