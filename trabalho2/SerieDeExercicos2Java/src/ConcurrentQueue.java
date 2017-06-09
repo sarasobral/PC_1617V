@@ -40,7 +40,7 @@ public class ConcurrentQueue_<T> {
     }
 	
 	/**
-	 * Test method.
+	 * Dist method.
 	 */
 
 	public static boolean testMichaelScottQueue() throws InterruptedException {
@@ -199,7 +199,7 @@ public class ConcurrentQueue_<T> {
 	}
 	
 	public static void main(String[] args) throws Throwable {
-		System.out.printf("%n--> Test Michael-Scott concurrent queue: %s%n",
+		System.out.printf("%n--> Dist Michael-Scott concurrent queue: %s%n",
 				 		  (testMichaelScottQueue() ? "passed" : "failed")); 
 	}
 }

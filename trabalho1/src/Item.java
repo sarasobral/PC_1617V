@@ -2,7 +2,6 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.locks.Condition;
 
 public class Item<T> {
-    // sendo a interrupção memorizada de forma a que possa vir a ser lançada pela thread mais tarde.
     private final Callable<T> function;
     private Condition condition;
     private boolean done;

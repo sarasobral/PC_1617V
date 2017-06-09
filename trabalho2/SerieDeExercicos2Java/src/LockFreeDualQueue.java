@@ -251,7 +251,7 @@ public class LockFreeDualQueue_<T> {
 	}
 
 	/**
-	 * Test dual queue to drive in a producer/consumer context.
+	 * Dist dual queue to drive in a producer/consumer context.
 	 */
 
 	public static boolean testLockFreeDualQueue() throws InterruptedException {	
@@ -399,7 +399,7 @@ public class LockFreeDualQueue_<T> {
 	}
 	
 	public static void main(String[] args) throws Throwable {
-		System.out.printf("%n--> Test lock free dual queue: %s%n",
+		System.out.printf("%n--> Dist lock free dual queue: %s%n",
 				 		  (testLockFreeDualQueue() ? "passed" : "failed")); 
 	}
 }
