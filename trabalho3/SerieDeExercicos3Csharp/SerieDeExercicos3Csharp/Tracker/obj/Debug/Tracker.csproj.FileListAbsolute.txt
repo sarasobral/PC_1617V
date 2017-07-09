@@ -1,0 +1,6 @@
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\Tracker\obj\Debug\Tracker.csprojResolveAssemblyReference.cache
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\Tracker\bin\Debug\Tracker.exe.config
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\Tracker\bin\Debug\Tracker.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\Tracker\bin\Debug\Tracker.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\Tracker\obj\Debug\Tracker.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\Tracker\obj\Debug\Tracker.pdb

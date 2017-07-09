@@ -13,16 +13,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 
-namespace Tracker
-{
+namespace Tracker {
     /// <summary>
     /// Singleton class that contains information regarding the tracked files, namely, the files' names
     /// and locations.
     /// 
     /// NOTE: This implementation is not thread-safe.
     /// </summary>
-    public class Store
-    {
+    public class Store {
         /// <summary>
         /// The singleton instance.
         /// </summary>

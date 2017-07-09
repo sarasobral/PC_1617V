@@ -15,13 +15,11 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 
-namespace Tracker
-{
+namespace Tracker {
     /// <summary>
     /// Handles client requests.
     /// </summary>
-    public sealed class Handler
-    {
+    public sealed class Handler {
         #region Message handlers
 
         /// <summary>
@@ -57,7 +55,7 @@ namespace Tracker
                 }
                 IPAddress ipAddress = IPAddress.Parse(triple[1]);
                 ushort port;
-                if(!ushort.TryParse(triple[2], out port))
+                if (!ushort.TryParse(triple[2], out port))
                 {
                     log.LogMessage("Handler - Invalid REGISTER message.");
                     return;
@@ -213,8 +211,7 @@ namespace Tracker
     /// This class instances are file tracking servers. They are responsible for accepting 
     /// and managing established TCP connections.
     /// </summary>
-    public sealed class Listener
-    {
+    public sealed class Listener {
         /// <summary>
         /// TCP port number in use.
         /// </summary>
@@ -261,8 +258,7 @@ namespace Tracker
 
     }
 
-    class Program
-    {
+    class Program {
         public static void ShowInfo(Store store)
         {
             foreach (string fileName in store.GetTrackedFiles())
@@ -277,30 +273,30 @@ namespace Tracker
             Console.WriteLine();
         }
 
-/*
-        static void TestStore()
-        {
-            Store store = Store.Instance;
+        /*
+                static void TestStore()
+                {
+                    Store store = Store.Instance;
 
-            store.Register("xpto", new IPEndPoint(IPAddress.Parse("193.1.2.3"), 1111));
-            store.Register("xpto", new IPEndPoint(IPAddress.Parse("194.1.2.3"), 1111));
-            store.Register("xpto", new IPEndPoint(IPAddress.Parse("195.1.2.3"), 1111));
-            ShowInfo(store);
-            Console.ReadLine();
-            store.Register("ypto", new IPEndPoint(IPAddress.Parse("193.1.2.3"), 1111));
-            store.Register("ypto", new IPEndPoint(IPAddress.Parse("194.1.2.3"), 1111));
-            ShowInfo(store);
-            Console.ReadLine();
-            store.Unregister("xpto", new IPEndPoint(IPAddress.Parse("195.1.2.3"), 1111));
-            ShowInfo(store);
-            Console.ReadLine();
+                    store.Register("xpto", new IPEndPoint(IPAddress.Parse("193.1.2.3"), 1111));
+                    store.Register("xpto", new IPEndPoint(IPAddress.Parse("194.1.2.3"), 1111));
+                    store.Register("xpto", new IPEndPoint(IPAddress.Parse("195.1.2.3"), 1111));
+                    ShowInfo(store);
+                    Console.ReadLine();
+                    store.Register("ypto", new IPEndPoint(IPAddress.Parse("193.1.2.3"), 1111));
+                    store.Register("ypto", new IPEndPoint(IPAddress.Parse("194.1.2.3"), 1111));
+                    ShowInfo(store);
+                    Console.ReadLine();
+                    store.Unregister("xpto", new IPEndPoint(IPAddress.Parse("195.1.2.3"), 1111));
+                    ShowInfo(store);
+                    Console.ReadLine();
 
-            store.Unregister("xpto", new IPEndPoint(IPAddress.Parse("193.1.2.3"), 1111));
-            store.Unregister("xpto", new IPEndPoint(IPAddress.Parse("194.1.2.3"), 1111));
-            ShowInfo(store);
-            Console.ReadLine();
-        }
-*/
+                    store.Unregister("xpto", new IPEndPoint(IPAddress.Parse("193.1.2.3"), 1111));
+                    store.Unregister("xpto", new IPEndPoint(IPAddress.Parse("194.1.2.3"), 1111));
+                    ShowInfo(store);
+                    Console.ReadLine();
+                }
+        */
 
 
         /// <summary>

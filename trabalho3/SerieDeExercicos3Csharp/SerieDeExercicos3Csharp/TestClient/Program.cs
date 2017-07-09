@@ -4,15 +4,13 @@ using System.IO;
 using System.Net.Sockets;
 using System.Net;
 
-namespace TestClient
-{
-    class Program
-    {
+namespace TestClient {
+    class Program {
         private const int PORT = 8888;
 
         private static void Register(IEnumerable<string> files, string adress, ushort port)
         {
-            using(TcpClient client = new TcpClient())
+            using (TcpClient client = new TcpClient())
             {
                 client.Connect(IPAddress.Loopback, PORT);
 
@@ -22,7 +20,7 @@ namespace TestClient
                 output.WriteLine("REGISTER");
 
                 // Send message payload
-                foreach(string file in files)
+                foreach (string file in files)
                     output.WriteLine(string.Format("{0}:{1}:{2}", file, adress, port));
 
                 // Send message end mark
@@ -108,7 +106,7 @@ namespace TestClient
 
         static void Main()
         {
-            Register(new [] {"xpto", "ypto", "zpto"}, "192.1.1.1", 5555);
+            Register(new[] { "xpto", "ypto", "zpto" }, "192.1.1.1", 5555);
             Register(new[] { "xpto", "ypto" }, "192.1.1.2", 5555);
             Register(new[] { "xpto" }, "192.1.1.3", 5555);
 

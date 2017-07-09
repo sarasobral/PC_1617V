@@ -1,0 +1,5 @@
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\TestClient\bin\Debug\TestClient.exe.config
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\TestClient\bin\Debug\TestClient.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\TestClient\bin\Debug\TestClient.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\TestClient\obj\Debug\TestClient.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\TestClient\obj\Debug\TestClient.pdb
