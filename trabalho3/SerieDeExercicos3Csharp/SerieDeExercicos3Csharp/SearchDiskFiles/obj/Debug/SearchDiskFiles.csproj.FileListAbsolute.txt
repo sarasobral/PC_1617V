@@ -1,0 +1,6 @@
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFiles\bin\Debug\SearchDiskFiles.exe.config
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFiles\bin\Debug\SearchDiskFiles.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFiles\bin\Debug\SearchDiskFiles.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFiles\obj\Debug\SearchDiskFiles.csprojResolveAssemblyReference.cache
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFiles\obj\Debug\SearchDiskFiles.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFiles\obj\Debug\SearchDiskFiles.pdb
