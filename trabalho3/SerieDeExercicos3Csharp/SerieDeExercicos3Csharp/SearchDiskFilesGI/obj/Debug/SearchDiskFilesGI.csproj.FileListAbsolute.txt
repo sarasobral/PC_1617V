@@ -1,0 +1,7 @@
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\bin\Debug\SearchDiskFilesGI.exe.config
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\bin\Debug\SearchDiskFilesGI.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\bin\Debug\SearchDiskFilesGI.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\obj\Debug\SearchDiskFilesGI.Properties.Resources.resources
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\obj\Debug\SearchDiskFilesGI.csproj.GenerateResource.Cache
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\obj\Debug\SearchDiskFilesGI.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\obj\Debug\SearchDiskFilesGI.pdb
