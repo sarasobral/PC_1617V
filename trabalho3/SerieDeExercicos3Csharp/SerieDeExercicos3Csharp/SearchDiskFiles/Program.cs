@@ -9,28 +9,23 @@ namespace SearchDiskFiles {
     class Program {
         static void Main(string[] args)
         {
-            var folder = @"C:\Windows\System32";
+            string folder = @"C:\Windows\System32";
+            string ext = "dll";
+            string keyWord = "teste";
             var cts = new CancellationTokenSource();
-
-
-            var task = SearchDiskFiles.Find(folder, "dll", "teste", cts.Token);
-
+            // create a task for the search
+            var task = SearchDiskFiles.Find(folder, ext, keyWord, cts.Token);
             try
             {
                 var watch = System.Diagnostics.Stopwatch.StartNew();
                 var result = task.Result; // wait for the result
                 watch.Stop();
-
                 Console.WriteLine("Time taken: {0}ms", watch.Elapsed.TotalMilliseconds);
                 Console.WriteLine("Total Files Found: " + result.totalFiles);
                 Console.WriteLine("Extension Files Found: " + result.totalFilesWithExtension);
                 Console.WriteLine("Files Matching: ");
-
                 foreach (var resultFile in result.files)
-                {
                     Console.WriteLine(resultFile);
-                }
-
             }
             catch (AggregateException ex)
             {
@@ -39,7 +34,6 @@ namespace SearchDiskFiles {
                     return true;
                 });
             }
-
             Console.WriteLine("Press enter...");
             Console.ReadKey();
         }
