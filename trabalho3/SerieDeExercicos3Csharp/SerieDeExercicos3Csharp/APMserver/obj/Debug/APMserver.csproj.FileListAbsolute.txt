@@ -1,0 +1,8 @@
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\APMserver\bin\Debug\APMserver.exe.config
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\APMserver\bin\Debug\APMserver.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\APMserver\bin\Debug\APMserver.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\APMserver\bin\Debug\Tracker.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\APMserver\bin\Debug\Tracker.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\APMserver\obj\Debug\APMserver.csprojResolveAssemblyReference.cache
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\APMserver\obj\Debug\APMserver.exe
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\APMserver\obj\Debug\APMserver.pdb
