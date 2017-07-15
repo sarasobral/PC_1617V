@@ -5,3 +5,4 @@ C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp
 C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\obj\Debug\SearchDiskFilesGI.csproj.GenerateResource.Cache
 C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\obj\Debug\SearchDiskFilesGI.exe
 C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\obj\Debug\SearchDiskFilesGI.pdb
+C:\Users\Utilizador\Documents\ISEL\PC\PC_1617V\trabalho3\SerieDeExercicos3Csharp\SerieDeExercicos3Csharp\SearchDiskFilesGI\obj\Debug\SearchDiskFilesGI.csprojResolveAssemblyReference.cache
